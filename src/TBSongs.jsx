@@ -48,10 +48,11 @@ function TBSongs(props) {
   };
   const topOptions = {
     indexAxis: "y",
-    responsive: false,
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
-        ticks: { color: "white", beginAtZero: true, font: { size: 15 } },
+        ticks: { color: "white", beginAtZero: true, font: { size: 15  } },
       },
       x: {
         min: 0,
@@ -76,7 +77,8 @@ function TBSongs(props) {
   };
   const bottomOptions = {
     indexAxis: "y",
-    responsive: false,
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         ticks: {
@@ -125,14 +127,13 @@ function TBSongs(props) {
       >
         Popularity
       </h1>
-      <div className="graphContainer">
-        <Bar data={topState} options={topOptions} width={800} height={380} />
-        <Bar
-          data={bottomState}
-          options={bottomOptions}
-          width={800}
-          height={380}
-        />
+
+      <div className="TBrow1">
+        <Bar data={topState} options={topOptions} />
+      </div>
+
+      <div className="TBrow2">
+        <Bar data={bottomState} options={bottomOptions} />
       </div>
     </div>
   );

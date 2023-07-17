@@ -6,19 +6,103 @@
   text-align: center;
 }
 
-.graphsContainer{
+.graphsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+  align-items: center;
+  height: 68rem;
+}
+.row2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+}
+.row1 {
+  width: 800px;
+  height: 380px;
+}
+.radarContainer {
+  height: 600px;
+  width: 600px;
+}
+.pieContainer {
+  height: 300px;
+  width: 300px;
+}
+
+@media (max-width: 992px) {
+  .AnalysisContainer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(102, 50, 50);
+    height: 90rem;
+    text-align: center;
+  }
+
+  .row2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+  }
+  .graphsContainer {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    
+
     align-items: center;
-    height: 68rem;
+    height: 82rem;
+  }
+  .row1 {
+    width: 600px;
+    height: 300px;
+  }
 }
-.row2{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 80rem;
-
+@media (max-width: 600px) {
+  .radarContainer {
+    height: 500px;
+    width: 500px;
+  }
+  .pieContainer {
+    height: 250px;
+    width: 250px;
+  }
+  .row1 {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .radarContainer {
+    height: 500px;
+    width: 400px;
+  }
+  .pieContainer {
+    height: 250px;
+    width: 250px;
+  }
+  .row1 {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .radarContainer {
+    height: 500px;
+    width: 300px;
+  }
+  .pieContainer {
+    height: 250px;
+    width: 250px;
+  }
+  .row1 {
+    width: 300px;
+    height: 300px;
+  }
 }

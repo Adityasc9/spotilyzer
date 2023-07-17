@@ -25,11 +25,34 @@
 }
 .artistCount {
   color: #f5cdcd;
-    margin-bottom: 0;
+  margin-bottom: 0;
 
   letter-spacing: 5px;
 }
 
 .artistHref {
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .artistName {
+    letter-spacing: 10px;
+    font-size: 2rem;
+  }
+  .artistContainer {
+
+  height: 83rem;
+
+}
+
+}
+@media (max-width: 400px) {
+  .artistName {
+    letter-spacing: 6px;
+    font-size: 2rem;
+  }
+  .artistList {
+    margin: 0px;
+    list-style: none;
+  }
 }

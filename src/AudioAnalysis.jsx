@@ -34,7 +34,8 @@ function AudioAnalysis(props) {
     ],
   };
   const options = {
-    responsive: false,
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         title: {
@@ -69,9 +70,9 @@ function AudioAnalysis(props) {
   };
   let radarState = {
     labels: [
-      "Danceability",
-      "Energy",
       "Instrumentalness",
+      "Energy",
+      "Danceability",
       "Liveness",
       "Acousticness",
       "Speechiness",
@@ -80,9 +81,9 @@ function AudioAnalysis(props) {
       {
         label: "%",
         data: [
-          props.data.danceability * 100,
-          props.data.energy * 100,
           props.data.instrumentalness * 100,
+          props.data.energy * 100,
+          props.data.danceability * 100,
           props.data.liveness * 100,
           props.data.acousticness * 100,
           props.data.speechiness * 100,
@@ -94,7 +95,7 @@ function AudioAnalysis(props) {
     ],
   };
   let radarOptions = {
-    responsive: false,
+    responsive: true,
     plugins: {
       legend: {
         display: false,
@@ -137,7 +138,7 @@ function AudioAnalysis(props) {
     ],
   };
   let pieOptions = {
-    responsive: false,
+    responsive: true,
     plugins: {
       legend: {
         display: true,
@@ -166,15 +167,16 @@ function AudioAnalysis(props) {
         Audio Analysis
       </h1>
       <div className="graphsContainer">
-        <Line data={state} options={options} width={800} height={380} />
+        <div className="row1">
+          <Line data={state} options={options} />
+        </div>
         <div className="row2">
-          <Radar
-            data={radarState}
-            options={radarOptions}
-            width={600}
-            height={600}
-          />
-          <Pie data={pieData} options={pieOptions} width={300} height={300} />
+          <div className="radarContainer">
+            <Radar data={radarState} options={radarOptions} />
+          </div>
+          <div className="pieContainer">
+            <Pie data={pieData} options={pieOptions} />
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 .PlaylistContainer {
   /* border: 1px;
   border-color: black;
@@ -9,15 +8,25 @@
   justify-content: space-around;
   align-items: center;
 }
-.data{
+.data {
   font-size: 25px;
   color: rgb(102, 50, 50);
   letter-spacing: 2px;
 }
-.name{
+.name {
   letter-spacing: 2px;
   transition: letter-spacing 0.5s;
 }
-.name:hover{
+.name:hover {
   letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+  .PlaylistContainer {
+    height: 40rem;
+    flex-direction: column;
+  }
+  .data {
+    text-align: center;
+  }
 }
