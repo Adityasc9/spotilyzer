@@ -44,6 +44,9 @@
   height: 83rem;
 
 }
+.artistName:hover {
+  letter-spacing: 12px;
+}
 
 }
 @media (max-width: 400px) {
@@ -55,4 +58,7 @@
     margin: 0px;
     list-style: none;
   }
+  .artistName:hover {
+  letter-spacing: 7px;
+}
 }
