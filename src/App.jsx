@@ -12,8 +12,8 @@ function App() {
       <NavBar />
       <div className="appContainer">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/result" element={<Result />} />
+          <Route path="/spotilyzer" element={<Home />} />
+          <Route path="/spotilyzer/result" element={<Result />} />
         </Routes>
       </div>
     </>

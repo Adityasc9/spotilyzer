@@ -8,7 +8,7 @@ import AudioAnalysis from "./AudioAnalysis";
 function Result() {
   let state = useLocation().state;
   if (state == null) {
-    location.href = "/";
+    location.href = "/spotilyzer";
     alert("Please provide a link before accessing the result page");
     return null;
   }
