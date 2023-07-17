@@ -7,3 +7,4 @@ Data shown:
   - Top 10 most popular and least popular songs
   - Audio analysis (danceablity, energy ...)
   - Tempo distribution
+  - Explicit song percentage
