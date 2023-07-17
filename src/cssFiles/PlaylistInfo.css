@@ -29,4 +29,12 @@
   .data {
     text-align: center;
   }
+  
+}
+
+@media (max-width: 450px) {
+  .data {
+  letter-spacing: 1px;
+}
+  
 }
