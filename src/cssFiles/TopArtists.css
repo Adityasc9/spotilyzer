@@ -1,0 +1,35 @@
+.artistContainer {
+  padding-top: 40px;
+  margin-top: 24px;
+  padding-bottom: 40px;
+  background-color: rgb(102, 50, 50);
+  height: 89rem;
+  text-align: center;
+}
+.artistList {
+  margin: 30px;
+  list-style: none;
+}
+.artistItem {
+  margin-top: 50px;
+}
+.artistName {
+  color: #f58888;
+  margin-bottom: 0;
+  letter-spacing: 12px;
+  font-size: 2.5rem;
+  transition: letter-spacing 0.5s;
+}
+.artistName:hover {
+  letter-spacing: 20px;
+}
+.artistCount {
+  color: #f5cdcd;
+    margin-bottom: 0;
+
+  letter-spacing: 5px;
+}
+
+.artistHref {
+  text-decoration: none;
+}

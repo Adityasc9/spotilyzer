@@ -1,0 +1,23 @@
+
+.PlaylistContainer {
+  /* border: 1px;
+  border-color: black;
+  border-style:dashed; */
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.data{
+  font-size: 25px;
+  color: rgb(102, 50, 50);
+  letter-spacing: 2px;
+}
+.name{
+  letter-spacing: 2px;
+  transition: letter-spacing 0.5s;
+}
+.name:hover{
+  letter-spacing: 5px;
+}

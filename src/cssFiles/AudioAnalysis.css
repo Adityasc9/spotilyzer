@@ -1,0 +1,24 @@
+.AnalysisContainer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(102, 50, 50);
+  height: 75rem;
+  text-align: center;
+}
+
+.graphsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    align-items: center;
+    height: 68rem;
+}
+.row2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 80rem;
+
+}
