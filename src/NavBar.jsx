@@ -1,15 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Link } from "react-router-dom";
 
 import "./cssFiles/NavBar.css";
 
 function NavBar() {
   return (
     <div className="text-center">
-      <a href="/spotilyzer" className="logo">
+      <Link to="/" className="logo">
         Spotilyzer
-      </a>
+      </Link>
     </div>
   );
 }
