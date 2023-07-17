@@ -83,7 +83,7 @@ function Home() {
       let data = await getData(url);
       let audioFeatures = await getAudioFeatures(data);
       data.audioFeatures = audioFeatures;
-      navigate("/spotilyzer/result/", { state: { data } });
+      navigate("/result", { state: { data } });
     } catch (error) {
       displayAlert("Error fetching data");
       console.error("Error:", error);

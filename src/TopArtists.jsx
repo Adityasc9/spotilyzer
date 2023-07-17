@@ -5,7 +5,7 @@ function TopArtists(props) {
   let artlistList = [];
   for (let artist of topArtists) {
     artlistList.push(
-      <a className="artistHref" href={artist[1]["link"]} target="_blank">
+      <a className="artistHref" href={artist[1]["link"]} target="_blank" key={artist[0]}>
         <li className="artistItem">
           <h2 className="artistName">{artist[0]}</h2>
           <br />
