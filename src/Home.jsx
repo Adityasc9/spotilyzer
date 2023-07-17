@@ -14,7 +14,6 @@ function Home() {
   };
 
   const displayAlert = (message) => {
-
     const alertContainer = document.getElementById("alertContainer");
 
     const alertHTML = `<div class="alert alert-warning" role="alert">${message}</div>`;
@@ -23,7 +22,6 @@ function Home() {
       alertContainer.innerHTML = "";
     }, 3000);
   };
-
 
   const getAudioFeatures = async (data) => {
     const track_ids = data.tracks.items
@@ -46,7 +44,7 @@ function Home() {
       audioFeatures.push(...audioFeaturesSubset); // this spreads out the subset insted of adding the entire subset
     }
     return audioFeatures;
-  }
+  };
 
   const fetchFeatures = async (arr) => {
     let url =
@@ -65,35 +63,33 @@ function Home() {
       console.error("Error getting audio features:", error);
       return [];
     }
-  }
+  };
 
   const handleClick = async () => {
     let playlistLink = document.getElementById("linkField").value;
 
-
     let playlistId = getPlaylistId(playlistLink);
-    if (!playlistId){
-      displayAlert("Invalid Link.")
+    if (!playlistId) {
+      displayAlert("Invalid Link.");
       return;
     }
     loadingContainer.innerHTML = '<div class="lds-dual-ring"></div>';
-    try{
+    try {
       let url =
-      "https://api.spotify.com/v1/playlists/" +
-      playlistId +
-      "?fields=external_urls%2Cimages%2Cname%2Cowner%28display_name%29%2C+tracks%28next%2Ctotal%2Citems%29";
-    
-      let data = await getData(url)
+        "https://api.spotify.com/v1/playlists/" +
+        playlistId +
+        "?fields=external_urls%2Cimages%2Cname%2Cowner%28display_name%29%2C+tracks%28next%2Ctotal%2Citems%29";
+
+      let data = await getData(url);
       let audioFeatures = await getAudioFeatures(data);
       data.audioFeatures = audioFeatures;
-      navigate("/result", { state: { data } });
-    }
-    catch (error){
+      navigate("/spotilyzer/result", { state: { data } });
+    } catch (error) {
       displayAlert("Error fetching data");
       console.error("Error:", error);
       loadingContainer.innerHTML = "";
     }
-  }
+  };
 
   const getData = async (url) => {
     let id = import.meta.env.VITE_SPOTIFY_ID;
@@ -113,39 +109,38 @@ function Home() {
       myDiv.textContent = "";
     }, 3000);
 
-    try{
+    try {
       const response = await fetch(tokenUrl, tokenOptions);
       const tokenData = await response.json();
       accessToken = tokenData.access_token;
-        const dataOptions = {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-            "Content-Type": "application/json",
-          },
-        };
-        let data = await fetch(url, dataOptions);
-        data = await data.json();
-        let endpoint = data["tracks"]["next"];
-        let allTracks = [];
-        const getRemainingItems = async () => {
-          while (endpoint) {
-            let restData = await fetch(endpoint, dataOptions)
-            restData = await restData.json()
-            allTracks = allTracks.concat(restData["items"]);
-            endpoint = restData["next"];
-          }
-          allTracks = data["tracks"]["items"].concat(allTracks);
-          data["tracks"]["items"] = allTracks;
-
-          return data;
+      const dataOptions = {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+        },
+      };
+      let data = await fetch(url, dataOptions);
+      data = await data.json();
+      let endpoint = data["tracks"]["next"];
+      let allTracks = [];
+      const getRemainingItems = async () => {
+        while (endpoint) {
+          let restData = await fetch(endpoint, dataOptions);
+          restData = await restData.json();
+          allTracks = allTracks.concat(restData["items"]);
+          endpoint = restData["next"];
         }
-        return getRemainingItems();
-    }
-    catch (error) {
+        allTracks = data["tracks"]["items"].concat(allTracks);
+        data["tracks"]["items"] = allTracks;
+
+        return data;
+      };
+      return getRemainingItems();
+    } catch (error) {
       console.error("Error fetching access token:", error);
       throw error;
     }
-  }
+  };
 
   return (
     <div className="link">
@@ -166,6 +161,5 @@ function Home() {
     </div>
   );
 }
-
 
 export default Home;
