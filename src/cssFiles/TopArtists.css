@@ -9,6 +9,7 @@
 .artistList {
   margin: 30px;
   list-style: none;
+  padding: 0;
 }
 .artistItem {
   margin-top: 50px;
