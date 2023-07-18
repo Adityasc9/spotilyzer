@@ -11,10 +11,9 @@ function PlaylistInfo(props) {
     <div className="PlaylistContainer">
       <a className="image-link" href={props.data.link} target="_blank">
         <img
+          className="Pimg"
           src={props.data.picture}
           alt="Playlist image"
-          height="350"
-          width="350"
           style={{ borderRadius: 45 }}
         ></img>
       </a>

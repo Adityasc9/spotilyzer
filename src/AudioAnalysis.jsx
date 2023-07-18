@@ -49,7 +49,7 @@ function AudioAnalysis(props) {
       x: {
         title: {
           display: true,
-          text: "BPM",
+          text: "Tempo",
           color: "white",
           font: { size: 22 },
         },
@@ -62,7 +62,7 @@ function AudioAnalysis(props) {
       },
       title: {
         display: true,
-        text: "Tempo/Beats Per Minute distribution (Avg: " + average + ")",
+        text: "Tempo distribution (Avg: " + average + ")",
         color: "white",
         font: { size: 20 },
       },

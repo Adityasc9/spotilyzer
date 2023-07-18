@@ -8,6 +8,10 @@
   justify-content: space-around;
   align-items: center;
 }
+.Pimg {
+  width: 350px;
+  height: 350px;
+}
 .data {
   font-size: 25px;
   color: rgb(102, 50, 50);
@@ -29,12 +33,25 @@
   .data {
     text-align: center;
   }
-  
 }
 
 @media (max-width: 450px) {
   .data {
-  letter-spacing: 1px;
+    letter-spacing: 1px;
+  }
+  .Pimg {
+    width: 300px;
+    height: 300px;
+  }
 }
-  
+
+@media (max-width: 400px) {
+  .data {
+    letter-spacing: 0px;
+    font-size: 25px;
+  }
+  .Pimg {
+    width: 300px;
+    height: 300px;
+  }
 }
