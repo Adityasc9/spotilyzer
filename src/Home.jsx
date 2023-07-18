@@ -146,8 +146,9 @@ function Home() {
     <div className="link">
       <div id="alertContainer"></div>
       <label htmlFor="linkField" className="linkText">
-        Playlist Link:
+        Spotify Playlist Link:
       </label>
+
       <input
         type="text"
         className="w-75 form-control"
