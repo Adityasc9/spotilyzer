@@ -85,7 +85,7 @@ function Home() {
       data.audioFeatures = audioFeatures;
       navigate("/result", { state: { data } });
     } catch (error) {
-      displayAlert("Error fetching data");
+      displayAlert("Error fetching data. Try disabling Privacy Badger.");
       console.error("Error:", error);
       loadingContainer.innerHTML = "";
     }
@@ -154,7 +154,11 @@ function Home() {
         id="linkField"
         placeholder="link"
       />
-      <button type="button" className="btn btn-light" onClick={handleClick}>
+      <button
+        type="button"
+        className="btn btn-outline-light"
+        onClick={handleClick}
+      >
         Analyze
       </button>
       <div id="loadingContainer"></div>

@@ -36,22 +36,19 @@
 
 @media (max-width: 500px) {
   .artistName {
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     font-size: 2rem;
   }
   .artistContainer {
-
-  height: 83rem;
-
-}
-.artistName:hover {
-  letter-spacing: 12px;
-}
-
+    height: 83rem;
+  }
+  .artistName:hover {
+    letter-spacing: 7px;
+  }
 }
 @media (max-width: 400px) {
   .artistName {
-    letter-spacing: 6px;
+    letter-spacing: 3px;
     font-size: 2rem;
   }
   .artistList {
@@ -59,6 +56,6 @@
     list-style: none;
   }
   .artistName:hover {
-  letter-spacing: 7px;
-}
+    letter-spacing: 5px;
+  }
 }
