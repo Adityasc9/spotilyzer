@@ -19,10 +19,27 @@
 }
 .name {
   letter-spacing: 2px;
-  transition: letter-spacing 0.5s;
+  transition: letter-spacing 0.3s;
+  position: relative;
 }
+
+.name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(102, 50, 50); /* Adjust the color as desired */
+  transition: width 0.3s ease;
+}
+
 .name:hover {
   letter-spacing: 5px;
+}
+
+.name:hover::after {
+  width: 26%;
 }
 
 @media (max-width: 768px) {
@@ -32,6 +49,9 @@
   }
   .data {
     text-align: center;
+  }
+  .name::after {
+    display: none;
   }
 }
 

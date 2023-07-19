@@ -33,6 +33,8 @@ function AudioAnalysis(props) {
       },
     ],
   };
+  const lineFont = screen.width < 500 ? 15 : 22;
+
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -42,18 +44,26 @@ function AudioAnalysis(props) {
           display: true,
           text: "Frequency",
           color: "white",
-          font: { size: 22 },
+          font: { size: lineFont },
         },
-        ticks: { color: "white", beginAtZero: true, font: { size: 15 } },
+        ticks: {
+          color: "white",
+          beginAtZero: true,
+          font: { size: lineFont - 3 },
+        },
       },
       x: {
         title: {
           display: true,
           text: "Tempo",
           color: "white",
-          font: { size: 22 },
+          font: { size: lineFont },
         },
-        ticks: { color: "white", beginAtZero: true, font: { size: 15 } },
+        ticks: {
+          color: "white",
+          beginAtZero: true,
+          font: { size: lineFont - 3 },
+        },
       },
     },
     plugins: {
@@ -64,7 +74,7 @@ function AudioAnalysis(props) {
         display: true,
         text: "Tempo distribution (Avg: " + average + ")",
         color: "white",
-        font: { size: 20 },
+        font: { size: lineFont + 2 },
       },
     },
   };
@@ -104,7 +114,7 @@ function AudioAnalysis(props) {
         display: true,
         text: "Average Audio Features",
         color: "white",
-        font: { size: 20 },
+        font: { size: lineFont + 2 },
       },
     },
     scales: {
@@ -117,7 +127,7 @@ function AudioAnalysis(props) {
         max: 100,
         pointLabels: {
           color: "white",
-          font: { size: 15 },
+          font: { size: lineFont - 2 },
         },
         ticks: {
           display: false,
@@ -150,7 +160,7 @@ function AudioAnalysis(props) {
         display: true,
         text: "Number of explicit songs",
         color: "white",
-        font: { size: 20 },
+        font: { size: lineFont + 2 },
       },
     },
   };

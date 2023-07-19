@@ -77,6 +77,15 @@
     width: 500px;
     height: 300px;
   }
+  .AnalysisContainer {
+    height: 90rem;
+  }
+  .row2{
+    height: 40rem;
+  }
+  .graphsContainer{
+    height: 68rem;
+  }
 }
 @media (max-width: 500px) {
   .radarContainer {
@@ -91,6 +100,15 @@
     width: 400px;
     height: 300px;
   }
+  .AnalysisContainer {
+    height: 80rem;
+  }
+  .row2{
+    height: 43rem;
+  }
+  .graphsContainer{
+    height: 68rem;
+  }
 }
 @media (max-width: 400px) {
   .radarContainer {
@@ -102,7 +120,25 @@
     width: 250px;
   }
   .row1 {
-    width: 300px;
+    width: 370px;
     height: 300px;
+  }
+  .AnalysisContainer {
+    height: 70rem;
+  }
+  .row2{
+    height: 36rem;
+  }
+  .graphsContainer{
+    height: 63rem;
+  }
+}
+@media (max-width: 375px){
+  .row1 {
+    width: 350px;
+    height: 300px;
+  }
+  .AnalysisContainer {
+    height: 77rem;
   }
 }
