@@ -1,40 +1,39 @@
-<h1>Spotilyzer</h1>
-<p><a href="https://adityasc9.github.io/spotilyzer">Spotilyzer</a> is a web application built using React, where users can analyze Spotify playlists by providing the playlist link. The application leverages the Spotify API to retrieve data and extract insights from the playlist.</p>
-    
-<h2>Features</h2>
-<ul>
-    <li><strong>General Information about Playlist:</strong> Overview of the playlist including the number of songs, total duration, etc.</li>
-    <li><strong>Top 10 Most Frequent Artists:</strong> Lists the most common artists in the playlist.</li>
-    <li><strong>Top 10 Most Popular and Least Popular Songs:</strong> Ranks the songs based on their popularity.</li>
-    <li><strong>Audio Analysis:</strong> Detailed analysis of audio features such as danceability, energy, etc.</li>
-    <li><strong>Tempo Distribution:</strong> Visualization of the tempo (beats per minute) distribution across the playlist.</li>
-    <li><strong>Explicit Song Percentage:</strong> Percentage of songs marked as explicit.</li>
-</ul>
+# Spotilyzer
 
-    
-<h2>Usage</h2>
-<ol>
-    <li>Open Spotilyzer in your web browser.</li>
-    <li>Enter the Spotify playlist link in the input field.</li>
-    <li>Click on "Analyze" to retrieve and view insights about the playlist.</li>
-</ol>
+[Spotilyzer](https://adityasc9.github.io/spotilyzer) is a web application built using React, where users can analyze Spotify playlists by providing the playlist link. The application leverages the Spotify API to retrieve data and extract insights from the playlist.
 
-<h2>Technologies Used</h2>
-<ul>
-    <li><strong>React:</strong> For building the user interface.</li>
-    <li><strong>Spotify API:</strong> To fetch playlist data.</li>
-    <li><strong>Chart.js:</strong> For visualizing data insights.</li>
-    <li><strong>Node.js & Express:</strong> For handling backend logic and API requests.</li>
-    <li><strong>Vite:</strong> As the development build tool.</li>
-</ul>
+## Features
 
-<h2>Contributing</h2>
-<p>We welcome contributions to Spotilyzer! If you have any ideas, suggestions, or bug fixes, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.</p>
+- **General Information about Playlist:** Overview of the playlist including the number of songs, total duration, etc.
+- **Top 10 Most Frequent Artists:** Lists the most common artists in the playlist.
+- **Top 10 Most Popular and Least Popular Songs:** Ranks the songs based on their popularity.
+- **Audio Analysis:** Detailed analysis of audio features such as danceability, energy, etc.
+- **Tempo Distribution:** Visualization of the tempo (beats per minute) distribution across the playlist.
+- **Explicit Song Percentage:** Percentage of songs marked as explicit.
 
-<h2>License</h2>
-<p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+## Usage
 
-<h2>Acknowledgments</h2>
-<ul>
-    <li>Thanks to the Spotify API for providing access to rich music data.</li>
-    <li>Chart.js 
+1. Open Spotilyzer in your web browser.
+2. Enter the Spotify playlist link in the input field.
+3. Click on "Analyze" to retrieve and view insights about the playlist.
+
+## Technologies Used
+
+- **React:** For building the user interface.
+- **Spotify API:** To fetch playlist data.
+- **Chart.js:** For visualizing data insights.
+- **Node.js & Express:** For handling backend logic and API requests.
+- **Vite:** As the development build tool.
+
+## Contributing
+
+We welcome contributions to Spotilyzer! If you have any ideas, suggestions, or bug fixes, please submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thanks to the Spotify API for providing access to rich music data.
+- Chart.js for the excellent data visualization library.
