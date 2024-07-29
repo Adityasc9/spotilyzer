@@ -11,20 +11,6 @@
     <li><strong>Explicit Song Percentage:</strong> Percentage of songs marked as explicit.</li>
 </ul>
 
-<h2>Installation</h2>
-<ol>
-    <li><strong>Clone the repository:</strong></li>
-    <pre><code>git clone https://github.com/yourusername/spotilyzer.git
-cd spotilyzer
-</code></pre>
-        <li><strong>Install the dependencies:</strong></li>
-        <pre><code>npm install
-</code></pre>
-        <li><strong>Run the application:</strong></li>
-        <pre><code>npm start
-</code></pre>
-        <p>This will start the development server and you can view the application at <a href="http://localhost:3000">http://localhost:3000</a>.</p>
-    </ol>
     
 <h2>Usage</h2>
 <ol>
